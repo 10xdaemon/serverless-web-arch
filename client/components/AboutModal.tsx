@@ -63,7 +63,7 @@ export default function AboutModal({ isOpen, onClose }: AboutModalProps) {
 
             <div>
               <p className="text-sm sm:text-base md:text-4xl lg:text-4xl font-bold text-black leading-tight">
-                I AM WORKING.
+                Cloud Engineer by Passion.
               </p>
             </div>
 
