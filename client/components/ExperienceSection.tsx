@@ -114,13 +114,13 @@ export default function ExperienceSection() {
   return (
     <section className="px-4 md:px-8 lg:px-16 py-8 md:py-16 flex flex-col items-center gap-6 md:gap-8">
       {/* Toggle Buttons */}
-      <div className="flex items-center gap-1 p-2 md:p-3 rounded-[20px] md:rounded-[30px] bg-[#E9E9E9] w-full max-w-[276px] md:max-w-[532px] lg:max-w-[698px]">
+      <div className="flex items-center gap-1 p-2 md:p-3 rounded-[20px] md:rounded-[30px] bg-secondary dark:bg-secondary w-full max-w-[276px] md:max-w-[532px] lg:max-w-[698px] transition-colors duration-300">
         <button
           onClick={() => setActiveTab("experience")}
           className={`flex-1 px-4 md:px-6 py-2 md:py-3 rounded-[10px] md:rounded-[15px] font-semibold text-sm md:text-lg lg:text-2xl transition-all ${
             activeTab === "experience"
-              ? "bg-black text-white"
-              : "bg-transparent text-black"
+              ? "bg-primary text-primary-foreground dark:bg-primary dark:text-primary-foreground"
+              : "bg-transparent text-foreground dark:text-foreground"
           }`}
         >
           experience
@@ -129,8 +129,8 @@ export default function ExperienceSection() {
           onClick={() => setActiveTab("education")}
           className={`flex-1 px-4 md:px-6 py-2 md:py-3 rounded-[10px] md:rounded-[15px] font-semibold text-sm md:text-lg lg:text-2xl transition-all ${
             activeTab === "education"
-              ? "bg-black text-white"
-              : "bg-transparent text-black"
+              ? "bg-primary text-primary-foreground dark:bg-primary dark:text-primary-foreground"
+              : "bg-transparent text-foreground dark:text-foreground"
           }`}
         >
           education
@@ -138,17 +138,17 @@ export default function ExperienceSection() {
       </div>
 
       {/* Content */}
-      <div className="w-full max-w-[299px] md:max-w-[544px] lg:max-w-[1000px] border border-black/20 rounded-[10px] md:rounded-[30px] bg-white overflow-hidden">
+      <div className="w-full max-w-[299px] md:max-w-[544px] lg:max-w-[1000px] border border-border rounded-[10px] md:rounded-[30px] bg-card dark:bg-card overflow-hidden transition-colors duration-300">
         {activeTab === "experience" ? (
           <div className="p-4 md:p-8 lg:p-12 relative">
             {/* Continuous vertical line behind all items */}
-            <div className="absolute left-[33px] md:left-[62px] lg:left-[93px] top-12 bottom-0 w-px bg-black" />
+            <div className="absolute left-[33px] md:left-[62px] lg:left-[93px] top-12 bottom-0 w-px bg-foreground/20 dark:bg-foreground/20" />
 
             <div className="space-y-6 md:space-y-12 lg:space-y-16 relative z-10">
               {experiences.map((exp, index) => (
                 <div key={index} className="flex gap-4 md:gap-8 lg:gap-12">
                   {/* Logo */}
-                  <div className="w-9 h-9 md:w-16 md:h-16 lg:w-[89px] lg:h-[87px] rounded-full border boarder-md:boarder-2 lg:boarder-2 border-black overflow-hidden flex-shrink-0 bg-white">
+                  <div className="w-9 h-9 md:w-16 md:h-16 lg:w-[89px] lg:h-[87px] rounded-full border boarder-md:boarder-2 lg:boarder-2 border-foreground/30 dark:border-foreground/30 overflow-hidden flex-shrink-0 bg-background dark:bg-background transition-colors duration-300">
                     <img
                       src={exp.logo}
                       alt={exp.company}
@@ -158,20 +158,20 @@ export default function ExperienceSection() {
 
                   {/* Content */}
                   <div className="flex-1 space-y-1 md:space-y-2 pt-1 md:pt-2">
-                    <p className="text-[8px] md:text-xs lg:text-sm font-light">
+                    <p className="text-[8px] md:text-xs lg:text-sm font-light text-foreground/60 dark:text-foreground/60">
                       {exp.dateRange}
                     </p>
-                    <h3 className="text-[8px] md:text-xs lg:text-base font-bold">
+                    <h3 className="text-[8px] md:text-xs lg:text-base font-bold text-foreground dark:text-foreground">
                       {exp.company}
                     </h3>
-                    <p className="text-[8px] md:text-xs lg:text-sm font-light italic">
+                    <p className="text-[8px] md:text-xs lg:text-sm font-light italic text-foreground/70 dark:text-foreground/70">
                       {exp.position}
                     </p>
                     <ul className="space-y-2 md:space-y-3 pt-2 md:pt-3">
                       {exp.bullets.map((bullet, bulletIndex) => (
                         <li
                           key={bulletIndex}
-                          className="text-[7px] md:text-[11px] lg:text-sm leading-relaxed"
+                          className="text-[7px] md:text-[11px] lg:text-sm leading-relaxed text-foreground/75 dark:text-foreground/75"
                         >
                           {bullet}
                         </li>
@@ -185,13 +185,13 @@ export default function ExperienceSection() {
         ) : (
           <div className="p-4 md:p-8 lg:p-12 relative">
             {/* Continuous vertical line behind all items */}
-            <div className="absolute left-[33px] md:left-[62px] lg:left-[93px] top-12 bottom-12 w-px bg-black" />
+            <div className="absolute left-[33px] md:left-[62px] lg:left-[93px] top-12 bottom-12 w-px bg-foreground/20 dark:bg-foreground/20" />
 
             <div className="space-y-6 md:space-y-12 lg:space-y-16 relative z-10">
               {education.map((edu, index) => (
                 <div key={index} className="flex gap-4 md:gap-8 lg:gap-12">
                   {/* Logo */}
-                  <div className="w-9 h-9 md:w-16 md:h-16 lg:w-[89px] lg:h-[87px] rounded-full border boarder-md:boarder-2 lg:boarder-2 border-black overflow-hidden flex-shrink-0 bg-white">
+                  <div className="w-9 h-9 md:w-16 md:h-16 lg:w-[89px] lg:h-[87px] rounded-full border boarder-md:boarder-2 lg:boarder-2 border-foreground/30 dark:border-foreground/30 overflow-hidden flex-shrink-0 bg-background dark:bg-background transition-colors duration-300">
                     <img
                       src={edu.logo}
                       alt={edu.school}
@@ -201,13 +201,13 @@ export default function ExperienceSection() {
 
                   {/* Content */}
                   <div className="flex-1 space-y-1 md:space-y-2 pt-1 md:pt-2">
-                    <p className="text-[8px] md:text-xs lg:text-sm font-light">
+                    <p className="text-[8px] md:text-xs lg:text-sm font-light text-foreground/60 dark:text-foreground/60">
                       {edu.dateRange}
                     </p>
-                    <h3 className="text-[8px] md:text-xs lg:text-base font-bold">
+                    <h3 className="text-[8px] md:text-xs lg:text-base font-bold text-foreground dark:text-foreground">
                       {edu.school}
                     </h3>
-                    <p className="text-[8px] md:text-xs lg:text-sm font-light italic">
+                    <p className="text-[8px] md:text-xs lg:text-sm font-light italic text-foreground/70 dark:text-foreground/70">
                       {edu.degree}
                     </p>
                     {edu.bullets.length > 0 && (
@@ -215,7 +215,7 @@ export default function ExperienceSection() {
                         {edu.bullets.map((bullet, bulletIndex) => (
                           <li
                             key={bulletIndex}
-                            className="text-[7px] md:text-[11px] lg:text-sm leading-relaxed"
+                            className="text-[7px] md:text-[11px] lg:text-sm leading-relaxed text-foreground/75 dark:text-foreground/75"
                           >
                             {bullet}
                           </li>

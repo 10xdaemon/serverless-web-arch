@@ -12,7 +12,7 @@ export default function Certifications() {
   return (
     <section className="px-8 md:px-16 py-6 md:py-12 lg:py-16 flex flex-col items-center gap-6 md:gap-8">
       {/* Section title - "Professional Certifications in" */}
-      <p className="text-center text-[11px] md:text-xl font-medium text-black/55 leading-[145%] tracking-[-0.055px] md:tracking-[-0.1px]">
+      <p className="text-center text-[11px] md:text-xl font-medium text-foreground/55 dark:text-foreground/55 leading-[145%] tracking-[-0.055px] md:tracking-[-0.1px] transition-colors duration-300">
         Professional Certifications in
       </p>
 
