@@ -34,7 +34,7 @@ export default function Hero() {
         <div className="fixed top-4 md:top-6 lg:top-8 right-4 md:right-8 lg:right-16 flex items-center gap-2 md:gap-3 px-2 md:px-4 py-1.5 md:py-2 rounded-[30px] bg-white/82 z-40">
           <div className="w-4 h-4 md:w-5 md:h-5 rounded-full bg-[#A6FF82] animate-pulse-dot flex-shrink-0" />
           <span className="text-[8px] md:text-sm font-medium text-gray-500 opacity-50 whitespace-nowrap">
-            Users Visited:
+            Viewers:
           </span>
           <span className="text-[8px] md:text-sm font-medium text-gray-500 opacity-50">
             {isLoading ? "..." : isError ? "!" : data?.views ?? 0}
