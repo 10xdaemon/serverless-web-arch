@@ -1,5 +1,6 @@
 import { useState } from "react";
 import AboutModal from "./AboutModal";
+import { useVisitorCount } from "./useVisitorCount.ts";
 
 /**
  * Hero Component
@@ -13,6 +14,7 @@ import AboutModal from "./AboutModal";
  */
 export default function Hero() {
   const [showModal, setShowModal] = useState(false);
+  const { data, isLoading, isError } = useVisitorCount();
 
   return (
     <section className="relative mx-4 md:mx-8 lg:mx-16 rounded-[20px] overflow-hidden">
@@ -35,7 +37,7 @@ export default function Hero() {
             Users Visited:
           </span>
           <span className="text-[8px] md:text-sm font-medium text-gray-500 opacity-50">
-            0
+            {isLoading ? "..." : isError ? "!" : data?.views ?? 0}
           </span>
         </div>
 
