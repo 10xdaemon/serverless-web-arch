@@ -63,6 +63,15 @@ const experiences: ExperienceItem[] = [
 // Education data - academic history with degrees and honors
 const education: EducationItem[] = [
   {
+    logo: "/assets/ccny_icon_v2.png",
+    dateRange: "Current",
+    school: "CUNY City College of New York",
+    degree: "BS in Computer Science",
+    bullets: [
+      "•Grove School of Engineering",
+    ],
+  },
+  {
     logo: "/assets/Google High Resolution Flat Logo - 2000x2000.png",
     dateRange: "Jul 2025 - Nov 2025",
     school: "Google IT Support Professional Certificate",
@@ -191,7 +200,7 @@ export default function ExperienceSection() {
               {education.map((edu, index) => (
                 <div key={index} className="flex gap-4 md:gap-8 lg:gap-12">
                   {/* Logo */}
-                  <div className="w-9 h-9 md:w-16 md:h-16 lg:w-[89px] lg:h-[87px] rounded-full border boarder-md:boarder-2 lg:boarder-2 border-foreground/30 dark:border-foreground/30 overflow-hidden flex-shrink-0 bg-background dark:bg-background transition-colors duration-300">
+                  <div className="w-9 h-9 md:w-16 md:h-16 lg:w-[85px] lg:h-[85px] rounded-full border boarder-md:boarder-2 lg:boarder-2 border-foreground/30 dark:border-foreground/30 overflow-hidden flex-shrink-0 bg-background dark:bg-background transition-colors duration-300">
                     <img
                       src={edu.logo}
                       alt={edu.school}
