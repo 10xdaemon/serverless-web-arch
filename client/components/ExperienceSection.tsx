@@ -28,16 +28,6 @@ type EducationItem = {
 
 // Experience data - work history with company info and achievements
 const experiences: ExperienceItem[] = [
-    {
-    logo: "/assets/per_scholas.png",
-    dateRange: "Present",
-    company: "Per Scholas",
-    position: "IT Support Specialist (Apprenticeship)",
-    bullets: [
-      '•Dual certified technical expertise. In pursuit of both CompTIA A+ and Google IT Support Professional certifications, validating mastery of hardware, networking, and security protocols',
-      "•Hands on system administration. Training labs entailing in person troubleshooting of Windows and Linux environments, including ticket management and AI-powered diagnostic tools",
-    ],
-  },
   {
     logo: "/assets/Handshake_app_icon_default.png",
     dateRange: "Nov 2025 - Present",
@@ -74,11 +64,21 @@ const experiences: ExperienceItem[] = [
 const education: EducationItem[] = [
   {
     logo: "/assets/ccny_icon_v2.png",
-    dateRange: "Current",
+    dateRange: "Expected May 2028",
     school: "CUNY City College of New York",
     degree: "BS in Computer Science",
     bullets: [
       "•Grove School of Engineering",
+    ],
+  },
+  {
+    logo: "/assets/per_scholas.png",
+    dateRange: "Jan 2026 - Apr 2026",
+    school: "Per Scholas",
+    degree: "IT Support Specialist",
+    bullets: [
+      '•Dual certified technical expertise. In pursuit of both CompTIA A+ and Google IT Support Professional certifications, validating mastery of hardware, networking, and security protocols',
+      "•Hands on system administration. Training labs entailing in person troubleshooting of Windows and Linux environments, including ticket management and AI-powered diagnostic tools",
     ],
   },
   {
