@@ -27,7 +27,7 @@ export default function FeaturedProjects() {
       <div className="flex gap-6 md:gap-8 overflow-x-auto pb-4 md:pb-0 scrollbar-hide px-4 md:px-8 lg:px-0">
         {/* Project Card 1 - Serverless Web Architecture with AWS */}
         <a
-          href="https://www.linkedin.com/feed/update/urn:li:activity:7413291382527733760/"
+          href="https://www.linkedin.com/feed/update/urn:li:activity:7421011724750839809/"
           target="_blank"
           rel="noopener noreferrer"
           className="flex-shrink-0 w-[336px] min-w-[320px] max-w-[388px] min-h-[280px] p-8 pb-2 flex flex-col gap-2 rounded-2xl border border-border dark:border-border bg-card dark:bg-card shadow-[0_4px_8px_0_rgba(0,0,0,0.02),0_12px_32px_0_rgba(0,0,0,0.04)] dark:shadow-[0_4px_8px_0_rgba(0,0,0,0.3),0_12px_32px_0_rgba(0,0,0,0.4)] transition-all duration-300 hover:shadow-[0_12px_24px_0_rgba(0,0,0,0.08),0_20px_48px_0_rgba(0,0,0,0.12)] dark:hover:shadow-[0_12px_24px_0_rgba(0,0,0,0.4),0_20px_48px_0_rgba(0,0,0,0.5)] hover:border-border/80 dark:hover:border-border/80 cursor-pointer"
